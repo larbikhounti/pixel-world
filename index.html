@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" importance="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- right points -->
+    <div class="points">
+      <ul class="points-list">
+        <li class="mySection" section="section0">
+          <a href="#section1"><i class="bi bi-record-circle-fill"></i></a>
+        </li>
+        <li class="mySection" section="section1">
+          <a href="#section2"><i class="bi bi-record-circle-fill"></i></a>
+        </li>
+        <li class="mySection" section="section2">
+          <a href="#section3"><i class="bi bi-record-circle-fill"></i></a>
+        </li>
+        <li class="mySection" section="section3">
+          <a href="#section4"><i class="bi bi-record-circle-fill"></i></a>
+        </li>
+        <li class="mySection" section="section4">
+          <a href="#section5"><i class="bi bi-record-circle-fill"></i></a>
+        </li>
+      </ul>
+    </div>
+    <!-- end right points -->
+<!-- nav menu-->
+    <nav id="nav-menu">
+        <div class="logo">
+            <a href="index.html">The Slider</a>
+        </div>
+      
+            <ul class="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Services</a></li>
+          
+                
+                <li><a href=""></a>Plans</li>
+           
+                
+                <li><a href=""></a>About Us</li>
+            </ul>
+         
+    </nav>
+
+<!-- end nav menu-->
+
+    <!-- sections -->
+    <section id="section1" class="section">
+      <div class="section-header">
+        <h1>WELCOME</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+          nesciunt porro corporis laudantium voluptatem ratione quo minima
+          adipisci cupiditate autem.
+        </p>
+      </div>
+    </section>
+    <section
+      id="section2"
+      class="section"
+      style="background-color: rgb(0, 0, 0) ;"
+    >
+      <h1>section 2</h1>
+    </section>
+    <section
+      id="section3"
+      class="section"
+      style="background-color: rgb(255, 251, 0)"
+    >
+      <h1>section 3</h1>
+    </section>
+    <section
+      id="section4"
+      class="section"
+      style="background-color: rgb(112, 52, 3)"
+    >
+      <h1>section 4</h1>
+    </section>
+    <section
+      id="section5"
+      class="section"
+      style="background-color: rgb(112, 52, 3)"
+    >
+      <h1>section 5</h1>
+    </section>
+    <!-- end sections -->
+
+    <!-- scripts for popover -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      let mySections = document.querySelectorAll(".mySection");
+      console.log(mySections);
+      mySections.forEach(function (section) {
+        section.addEventListener("mouseover", function (e) {
+          e.preventDefault();
+          let section = this.getAttribute("section");
+          tippy(this, {
+            content: section,
+            placement: "left",
+            interactive: true,
+            theme: "light",
+            arrow: true,
+            arrowType: "round",
+            arrowSize: "regular",
+            arrowPosition: "left",
+            duration: 500,
+          });
+        });
+      });
+    </script>
+    <!-- end scripts -->
+  </body>
+</html>
